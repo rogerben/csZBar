@@ -140,7 +140,7 @@ implements SurfaceHolder.Callback {
             Boolean drawSight = params.optBoolean("drawSight", true);
             whichCamera = params.optString("camera");
             flashMode = params.optString("flash");
-
+		 this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             // Initiate instance variables
             autoFocusHandler = new Handler();
             scanner = new ImageScanner();
