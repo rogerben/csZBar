@@ -294,11 +294,16 @@ implements SurfaceHolder.Callback {
 
         surfW = w;
         surfH = h;
-        matchSurfaceToPreviewRatio();
+       // matchSurfaceToPreviewRatio();
 
-        tryStopPreview();
-        holder = hld;
-        tryStartPreview();
+     //   tryStopPreview();
+      //  holder = hld;
+    //    tryStartPreview();
+    if(camera!=null) {
+    tryStopPreview();
+    holder = hld;
+    tryStartPreview();
+	}
     }
     public void onConfigurationChanged(Configuration newConfig)
     {
@@ -326,8 +331,12 @@ implements SurfaceHolder.Callback {
             rotation = 90;
             break;
         }
-        camera.setDisplayOrientation(rotation);
-        android.hardware.Camera.Parameters params = camera.getParameters();
+       // camera.setDisplayOrientation(rotation);
+      //  android.hardware.Camera.Parameters params = camera.getParameters();
+          if(camera!=null) {
+            camera.setDisplayOrientation(rotation);
+            android.hardware.Camera.Parameters params = camera.getParameters();
+        }
         tryStopPreview();
         tryStartPreview();
 
