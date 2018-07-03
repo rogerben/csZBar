@@ -326,7 +326,7 @@ implements SurfaceHolder.Callback {
             rotation = 90;
             break;
         }
-        camera.setDisplayOrientation(rotation);
+      //  camera.setDisplayOrientation(rotation);
         android.hardware.Camera.Parameters params = camera.getParameters();
         tryStopPreview();
         tryStartPreview();
@@ -522,7 +522,7 @@ implements SurfaceHolder.Callback {
                 }
                 // 90 degrees rotation for Portrait orientation Activity.
                // camera.setDisplayOrientation(rotation);
-             //   setCameraDisplayOrientation(this, 0);
+                setCameraDisplayOrientation(this, 0);
 
                 android.hardware.Camera.Parameters camParams = camera.getParameters();
 
