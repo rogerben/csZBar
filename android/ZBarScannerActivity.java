@@ -326,7 +326,7 @@ implements SurfaceHolder.Callback {
             rotation = 90;
             break;
         }
-      //  camera.setDisplayOrientation(rotation);
+        camera.setDisplayOrientation(rotation);
         android.hardware.Camera.Parameters params = camera.getParameters();
         tryStopPreview();
         tryStartPreview();
